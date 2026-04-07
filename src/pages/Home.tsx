@@ -289,6 +289,8 @@ export default function Home() {
                     <img
                       src={pkg.image}
                       alt={`Gambar ${pkg.title}`}
+                      loading="lazy"
+                      decoding="async"
                       className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-blue-900/0 transition-colors duration-300 group-hover:bg-blue-900/10"></div>
