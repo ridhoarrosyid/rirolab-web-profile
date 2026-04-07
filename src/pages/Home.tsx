@@ -58,9 +58,11 @@ export default function Home() {
                   <MessageCircle size={18} />
                   Konsultasi via WhatsApp
                 </a>
-                <button className="flex transform items-center gap-2 rounded-full border border-gray-200 bg-white px-7 py-3.5 font-medium text-blue-950 transition-all hover:-translate-y-1 hover:bg-gray-50">
-                  Lihat Portofolio
-                </button>
+                <a href="#portfolio">
+                  <button className="flex transform items-center gap-2 rounded-full border border-gray-200 bg-white px-7 py-3.5 font-medium text-blue-950 transition-all hover:-translate-y-1 hover:bg-gray-50">
+                    Lihat Portofolio
+                  </button>
+                </a>
               </div>
             </div>
             <div className="group perspective relative">
@@ -264,7 +266,7 @@ export default function Home() {
         </section>
 
         {/* Portfolio Section */}
-        <section id="portofolio" className="bg-white py-24">
+        <section id="portfolio" className="bg-white py-24">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mx-auto mb-16 max-w-2xl text-center">
               <span className="mb-2 block text-sm font-bold tracking-wider text-blue-600 uppercase">
