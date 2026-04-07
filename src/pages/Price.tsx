@@ -18,14 +18,6 @@ export default function Price() {
           name="keywords"
           content="harga pembuatan landing page profesional, harga jasa pembuatan website, buat landing page lampung, jasa landing page bisnis profesional, biaya pembuatan company profile"
         />
-        <meta
-          property="og:title"
-          content="Harga Jasa Pembuatan Website & Landing Page | Rirolab"
-        />
-        <meta
-          property="og:description"
-          content="Transparansi harga tanpa biaya tersembunyi untuk pembuatan landing page dan company profile profesional."
-        />
       </Helmet>
 
       <div className="min-h-screen overflow-x-hidden scroll-smooth bg-gray-50 font-sans text-slate-900">

@@ -18,14 +18,6 @@ export default function About() {
           name="keywords"
           content="pembuat company profile lampung, jasa pembuatan company profile kontraktor, jasa redesign company profile, web agency lampung, tentang rirolab"
         />
-        <meta
-          property="og:title"
-          content="Tentang Rirolab | Web Agency B2B Profesional"
-        />
-        <meta
-          property="og:description"
-          content="Membangun otoritas digital melalui arsitektur desain yang presisi untuk perusahaan B2B."
-        />
       </Helmet>
       <div className="min-h-screen overflow-x-hidden bg-gray-50 font-sans text-slate-900">
         {/* Hero Section */}
