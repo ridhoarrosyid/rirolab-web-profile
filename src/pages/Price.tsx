@@ -2,8 +2,27 @@ import { CheckCircle2 } from "lucide-react";
 import { companyProfilePackages, landingPagePackages } from "../data";
 import FloatingWa from "../components/FloatingWa";
 import { Helmet } from "react-helmet-async";
+import { useLocation } from "react-router";
+import { useEffect } from "react";
 
 export default function Price() {
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    // Jika ada hash (misal: #landing-page) di URL
+    if (hash) {
+      // Kita gunakan setTimeout kecil agar React punya waktu menggambar DOM sebelum di-scroll
+      setTimeout(() => {
+        const element = document.getElementById(hash.replace("#", ""));
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
+    } else {
+      // Jika pengunjung hanya ke /price, paksa scroll ke paling atas
+      window.scrollTo(0, 0);
+    }
+  }, [hash]);
   return (
     <>
       <Helmet>
@@ -20,7 +39,7 @@ export default function Price() {
         />
       </Helmet>
 
-      <div className="min-h-screen overflow-x-hidden scroll-smooth bg-gray-50 font-sans text-slate-900">
+      <div className="min-h-screen overflow-x-hidden bg-gray-50 font-sans text-slate-900">
         {/* Header Section */}
         <section className="mx-auto max-w-7xl px-4 pt-32 pb-12 sm:px-6 lg:px-8 lg:pt-40 lg:pb-16">
           <div className="animate-in fade-in slide-in-from-bottom-8 max-w-3xl duration-700">
@@ -42,7 +61,7 @@ export default function Price() {
         {/* Pricing: Landing Page */}
         <section
           id="landing-page"
-          className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8"
+          className="mx-auto max-w-7xl px-4 py-12 pt-20 sm:px-6 lg:px-8"
         >
           <div className="mb-10 flex flex-col border-l-4 border-blue-900 pl-4 md:flex-row md:items-end md:justify-between">
             <div>
@@ -161,7 +180,7 @@ export default function Price() {
         {/* Pricing: Company Profile */}
         <section
           id="company-profile"
-          className="mx-auto max-w-7xl px-4 py-12 pb-24 sm:px-6 lg:px-8"
+          className="mx-auto max-w-7xl px-4 py-12 pt-20 pb-24 sm:px-6 lg:px-8"
         >
           <div className="mb-10 flex flex-col border-l-4 border-blue-900 pl-4 md:flex-row md:items-end md:justify-between">
             <div>
