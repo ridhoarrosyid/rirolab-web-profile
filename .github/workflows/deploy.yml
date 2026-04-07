@@ -1,0 +1,44 @@
+name: Deploy Vite React to CloudPanel
+
+# Workflow ini akan berjalan setiap kali ada push ke branch "main"
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Mengambil kode terbaru dari repository
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      # 2. Menyiapkan environment Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22" # Sesuaikan dengan versi Node.js yang Anda gunakan
+
+      # 3. Menginstal dependencies (seperti npm install)
+      - name: Install Dependencies
+        run: npm install
+
+      # 4. Melakukan build project Vite
+      - name: Build Project
+        run: npm run build
+
+      # 5. Mengirim folder 'dist' ke CloudPanel via SCP
+      - name: Deploy to Server
+        uses: appleboy/scp-action@v0.1.4
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USERNAME }}
+          password: ${{ secrets.SERVER_PASSWORD }}
+          port: 22
+          source: "dist/*"
+          # GANTI JALUR INI sesuai dengan struktur folder di CloudPanel Anda
+          target: "/home/rirolab/htdocs/rirolab.com"
+          # strip_components: 1 memastikan yang diupload isinya, bukan folder 'dist'-nya
+          strip_components: 1
