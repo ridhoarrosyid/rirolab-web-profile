@@ -33,7 +33,7 @@ export default function Home() {
           content="jasa pembuatan website di lampung, web agency lampung terbaik, jasa pembuatan website B2B jakarta, pembuatan web perusahaan konstruksi, jasa pembuatan website perusahaan di jakarta"
         />
       </Helmet>
-      <div className="min-h-screen overflow-x-hidden bg-gray-50 font-sans text-slate-900">
+      <div className="min-h-screen overflow-x-hidden scroll-smooth bg-gray-50 font-sans text-slate-900">
         {/* Hero Section */}
         <section className="mx-auto max-w-7xl px-4 pt-32 pb-20 sm:px-6 lg:px-8 lg:pt-40 lg:pb-28">
           <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-8">
