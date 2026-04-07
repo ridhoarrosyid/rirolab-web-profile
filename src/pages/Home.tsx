@@ -12,6 +12,7 @@ import { Link } from "react-router";
 import PutriCandiDesktop from "../assets/images/putri-candi.webp";
 import FloatingWa from "../components/FloatingWa";
 import { projectsHome } from "../data";
+import { Helmet } from 'react-helmet-async';
 
 export default function Home() {
   const waLinkHero =
@@ -20,6 +21,21 @@ export default function Home() {
     "https://wa.me/6285183303954?text=Halo%20Rirolab%2C%20saya%20siap%20membangun%20kredibilitas%20digital%20bisnis%20saya.%20Saya%20ingin%20menjadwalkan%20konsultasi%20gratis";
 
   return (
+    <>
+    <Helmet>
+        <title>Rirolab | Wajah Digital untuk Bisnis Profesional</title>
+        <meta 
+          name="description" 
+          content="Web agency terbaik untuk jasa pembuatan website, landing page, dan company profile. Solusi digital strategis untuk B2B dan perusahaan konstruksi di Lampung dan Jakarta." 
+        />
+        <meta 
+          name="keywords" 
+          content="jasa pembuatan website di lampung, web agency lampung terbaik, jasa pembuatan website B2B jakarta, pembuatan web perusahaan konstruksi, jasa pembuatan website perusahaan di jakarta" 
+        />
+        <meta property="og:title" content="Rirolab | Wajah Digital untuk Bisnis Profesional" />
+        <meta property="og:description" content="Web agency untuk jasa pembuatan website, landing page, dan company profile B2B di Lampung dan Jakarta." />
+        <meta property="og:type" content="website" />
+      </Helmet>
     <div className="min-h-screen overflow-x-hidden bg-gray-50 font-sans text-slate-900">
       {/* Hero Section */}
       <section className="mx-auto max-w-7xl px-4 pt-32 pb-20 sm:px-6 lg:px-8 lg:pt-40 lg:pb-28">
@@ -324,6 +340,6 @@ export default function Home() {
 
       {/* Floating WhatsApp Button */}
       <FloatingWa />
-    </div>
+    </div></>
   );
 }
