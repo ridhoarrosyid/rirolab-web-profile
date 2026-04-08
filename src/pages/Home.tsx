@@ -13,12 +13,17 @@ import PutriCandiDesktop from "../assets/images/putri-candi.webp";
 import FloatingWa from "../components/FloatingWa";
 import { projectsHome } from "../data";
 import { Helmet } from "react-helmet-async";
+import { useEffect } from "react";
 
 export default function Home() {
   const waLinkHero =
     "https://wa.me/6285183303954?text=Halo%20Rirolab%2C%20saya%20tertarik%20untuk%20konsultasi%20gratis%20mengenai%20pembuatan%20wajah%20digital%20untuk%20bisnis%20saya";
   const waLinkCTA =
     "https://wa.me/6285183303954?text=Halo%20Rirolab%2C%20saya%20siap%20membangun%20kredibilitas%20digital%20bisnis%20saya.%20Saya%20ingin%20menjadwalkan%20konsultasi%20gratis";
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <>

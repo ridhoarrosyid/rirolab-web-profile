@@ -2,8 +2,12 @@ import { ShieldCheck, Settings, TrendingUp, Users } from "lucide-react";
 import FloatingWa from "../components/FloatingWa";
 import HeroAbout from "../assets/images/hero-about.webp";
 import { Helmet } from "react-helmet-async";
+import { useEffect } from "react";
 
 export default function About() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <Helmet>
