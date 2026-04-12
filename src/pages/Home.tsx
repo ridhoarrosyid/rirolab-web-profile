@@ -44,16 +44,19 @@ export default function Home() {
           <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-8">
             <div className="animate-in fade-in slide-in-from-bottom-8 space-y-8 duration-700">
               <div className="inline-flex items-center rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold tracking-wide text-blue-700 uppercase">
-                Rirolab Profil
+                WAJAH DIGITAL UNTUK BISNIS PROFESIONAL
               </div>
               <h1 className="text-5xl leading-tight font-extrabold tracking-tight text-blue-950 lg:text-6xl">
-                Wajah Digital <br />
-                <span className="text-blue-900">untuk Bisnis Profesional</span>
+                Jasa Pembuatan <br />
+                <span className="text-blue-900">
+                  Website & Landing Page B2B
+                </span>
               </h1>
               <p className="max-w-xl text-lg leading-relaxed text-gray-600">
-                Membangun identitas digital B2B yang solid melalui website yang
-                profesional dan terukur, dirancang khusus untuk meningkatkan
-                konversi dan kredibilitas bisnis Anda.
+                Ubah pengunjung menjadi klien potensial. Kami membangun company
+                profile dan halaman penawaran berkinerja tinggi yang dirancang
+                khusus untuk meningkatkan kredibilitas serta konversi bisnis
+                Anda.
               </p>
               <div className="flex flex-wrap gap-4 pt-4">
                 <a
