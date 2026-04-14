@@ -5,6 +5,7 @@ import { Helmet } from "react-helmet-async";
 import { useEffect } from "react";
 
 export default function About() {
+  
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);

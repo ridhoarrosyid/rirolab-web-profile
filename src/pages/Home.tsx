@@ -14,6 +14,7 @@ import FloatingWa from "../components/FloatingWa";
 import { projectsHome } from "../data";
 import { Helmet } from "react-helmet-async";
 import { useEffect } from "react";
+import { trackWAConversion } from "../utils/analytics";
 
 export default function Home() {
   const waLinkHero =
@@ -61,6 +62,8 @@ export default function Home() {
               <div className="flex flex-wrap gap-4 pt-4">
                 <a
                   href={waLinkHero}
+                  target="_blank"
+                  onClick={trackWAConversion}
                   className="flex transform items-center gap-2 rounded-full bg-blue-950 px-7 py-3.5 font-medium text-white shadow-lg shadow-blue-900/30 transition-all hover:-translate-y-1 hover:bg-blue-900"
                 >
                   <MessageCircle size={18} />
@@ -338,6 +341,8 @@ export default function Home() {
               </p>
               <a
                 href={waLinkCTA}
+                onClick={trackWAConversion}
+                target="_blank"
                 className="group mx-auto flex transform items-center justify-center gap-3 rounded-full bg-white px-8 py-4 text-lg font-bold text-blue-950 shadow-xl transition-all hover:scale-105 hover:bg-gray-50"
               >
                 Konsultasi Gratis Sekarang

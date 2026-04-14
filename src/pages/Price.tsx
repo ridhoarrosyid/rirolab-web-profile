@@ -4,6 +4,7 @@ import FloatingWa from "../components/FloatingWa";
 import { Helmet } from "react-helmet-async";
 import { useLocation } from "react-router";
 import { useEffect } from "react";
+import { trackWAConversion } from "../utils/analytics";
 
 export default function Price() {
   const { hash } = useLocation();
@@ -121,7 +122,12 @@ export default function Price() {
                     </li>
                   ))}
                 </ul>
-                <a href={pkg.linkCta} target="_blank" rel="noopener noreferrer">
+                <a
+                  href={pkg.linkCta}
+                  onClick={trackWAConversion}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <button
                     className={`mt-auto w-full transform rounded-xl py-3.5 text-sm font-bold transition-all hover:scale-105 ${
                       pkg.isPopular
@@ -240,7 +246,12 @@ export default function Price() {
                     </li>
                   ))}
                 </ul>
-                <a href={pkg.linkCta} target="_blank" rel="noopener noreferrer">
+                <a
+                  href={pkg.linkCta}
+                  onClick={trackWAConversion}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <button
                     className={`mt-auto w-full transform rounded-xl py-3.5 text-sm font-bold transition-all hover:scale-105 ${
                       pkg.isPopular
