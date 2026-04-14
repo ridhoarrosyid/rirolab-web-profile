@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router";
 import { Menu, X } from "lucide-react";
 import LogoRirolab from "../assets/icons/logo-rirolab.webp";
+import { trackWAConversion } from "../utils/analytics";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -74,6 +75,7 @@ export default function Navbar() {
           <div className="hidden md:flex">
             <a
               href={waLinkNavbar}
+              onClick={trackWAConversion}
               target="_blank"
               rel="noopener noreferrer"
               className="transform rounded-full bg-blue-950 px-6 py-2.5 text-sm font-medium text-white shadow-lg shadow-blue-900/20 transition-all hover:scale-105 hover:bg-blue-900"
@@ -123,7 +125,10 @@ export default function Navbar() {
               href={waLinkNavbar}
               target="_blank"
               rel="noopener noreferrer"
-              onClick={closeMenu}
+              onClick={() => {
+                closeMenu();
+                trackWAConversion();
+              }}
               className="mt-4 block w-full rounded-full bg-blue-950 px-6 py-3 text-center text-sm font-medium text-white"
             >
               Hubungi Kami

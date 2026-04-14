@@ -2,6 +2,7 @@ import { Link } from "react-router";
 import Instagram from "../assets/icons/Instagram";
 import Facebook from "../assets/icons/Facebook";
 import LogoRirolab from "../assets/icons/logo-rirolab.webp";
+import { trackWAConversion } from "../utils/analytics";
 
 export default function Footer() {
   const waLink =
@@ -88,6 +89,7 @@ export default function Footer() {
                 <a
                   href={waLink}
                   target="_blank"
+                  onClick={trackWAConversion}
                   rel="noopener noreferrer"
                   className="text-sm text-gray-500 transition-colors hover:text-blue-600"
                 >
