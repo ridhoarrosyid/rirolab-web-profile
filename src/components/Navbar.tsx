@@ -26,7 +26,7 @@ export default function Navbar() {
               <img
                 src={LogoRirolab}
                 alt="Rirolab Logo"
-                className="w-14 rounded-full bg-white p-1"
+                className="w-14 rounded-full bg-white p-1 dark:bg-slate-100"
               />
             </Link>
           </div>

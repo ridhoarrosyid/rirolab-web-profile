@@ -20,7 +20,7 @@ export default function Footer() {
               <img
                 src={LogoRirolab}
                 alt="Rirolab Logo"
-                className="w-14 rounded-full bg-white p-1"
+                className="w-14 rounded-full bg-white p-1 dark:bg-slate-100"
               />
             </Link>
             <p className="mb-6 max-w-sm text-sm leading-relaxed text-gray-500">
