@@ -29,10 +29,12 @@ export default function Home() {
   return (
     <>
       <Helmet>
-        <title>Rirolab | Wajah Digital untuk Bisnis Profesional</title>
+        <title>
+          Jasa Website B2B & Kontraktor Profesional di Lampung | Rirolab
+        </title>
         <meta
           name="description"
-          content="Web agency terbaik untuk jasa pembuatan website, landing page, dan company profile. Solusi digital strategis untuk B2B dan perusahaan konstruksi di Lampung dan Jakarta."
+          content="Menangkan lebih banyak tender dan bangun kepercayaan klien dengan website company profile premium. Desain elegan, cepat, & responsif. Hubungi kami hari ini!"
         />
         <meta
           name="keywords"
