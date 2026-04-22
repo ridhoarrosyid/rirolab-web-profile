@@ -3,7 +3,7 @@ import { Link } from "react-router";
 
 export default function NotFound() {
   return (
-    <div className="animate-in fade-in flex min-h-[70vh] flex-col items-center justify-center px-4 text-center duration-500 sm:px-6 lg:px-8">
+    <div className="animate-in fade-in flex min-h-[70vh] flex-col items-center justify-center px-4 py-40 text-center duration-500 sm:px-6 lg:px-8">
       <div className="mb-8 flex h-20 w-20 items-center justify-center rounded-2xl bg-blue-50 text-blue-900 shadow-sm">
         <SearchX size={40} />
       </div>
