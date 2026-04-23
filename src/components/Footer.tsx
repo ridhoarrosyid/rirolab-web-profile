@@ -89,7 +89,7 @@ export default function Footer() {
                 <a
                   href={waLink}
                   target="_blank"
-                  onClick={trackWAConversion}
+                  onClick={(e) => trackWAConversion(e, waLink)}
                   rel="noopener noreferrer"
                   className="text-sm text-gray-500 transition-colors hover:text-blue-600"
                 >

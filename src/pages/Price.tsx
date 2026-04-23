@@ -124,7 +124,7 @@ export default function Price() {
                 </ul>
                 <a
                   href={pkg.linkCta}
-                  onClick={trackWAConversion}
+                  onClick={(e) => trackWAConversion(e, pkg.linkCta)}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -248,7 +248,7 @@ export default function Price() {
                 </ul>
                 <a
                   href={pkg.linkCta}
-                  onClick={trackWAConversion}
+                  onClick={(e) => trackWAConversion(e, pkg.linkCta)}
                   target="_blank"
                   rel="noopener noreferrer"
                 >

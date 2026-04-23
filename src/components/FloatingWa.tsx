@@ -8,7 +8,7 @@ export default function FloatingWa() {
     <a
       href={message}
       target="_blank"
-      onClick={trackWAConversion}
+      onClick={(e) => trackWAConversion(e, message)}
       rel="noopener noreferrer"
       className="animate-bounce-slow fixed right-6 bottom-6 z-50 flex items-center justify-center rounded-full bg-green-500 p-4 text-white shadow-lg shadow-green-500/30 transition-all hover:scale-110 hover:bg-green-600"
       aria-label="Chat on WhatsApp"
