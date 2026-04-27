@@ -5,6 +5,7 @@ import Price from "./pages/Price";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import NotFound from "./pages/NotFound";
+import LandingPageService from "./pages/LandingPageService";
 
 function App() {
   return (
@@ -18,6 +19,8 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/price" element={<Price />} />
         <Route path="*" element={<NotFound />} />
+
+        <Route path="/landing-page-service" element={<LandingPageService />} />
       </Routes>
       <Footer />
     </BrowserRouter>
