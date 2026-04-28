@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Zap,
   Settings,
@@ -163,6 +163,10 @@ export default function LandingPageService() {
     landingPageConversion(e as never, url);
   };
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="min-h-screen bg-white font-sans text-slate-900">
       {/* 1. Hero Section */}
@@ -197,6 +201,7 @@ export default function LandingPageService() {
             <div className="absolute -inset-1 rounded-2xl bg-blue-600/10 blur-2xl"></div>
             <div className="relative overflow-hidden rounded-2xl border border-slate-800 bg-slate-900 shadow-2xl">
               <img
+                loading="eager"
                 src={putriCandiDesktop}
                 className="h-auto w-full object-cover"
                 alt="Gambar Landing Page Putri Candi"
@@ -338,6 +343,7 @@ export default function LandingPageService() {
                 >
                   <div className="relative aspect-video w-full overflow-hidden bg-gray-100">
                     <img
+                      loading="lazy"
                       src={e.image}
                       alt={e.caption}
                       className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
