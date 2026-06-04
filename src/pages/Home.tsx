@@ -283,7 +283,7 @@ export default function Home() {
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mx-auto mb-16 max-w-2xl text-center">
               <span className="mb-2 block text-sm font-bold tracking-wider text-blue-600 uppercase">
-                Studi Kasus
+                Portfolio
               </span>
               <h2 className="mb-4 text-3xl font-bold text-blue-950 lg:text-4xl">
                 Transformasi Digital Pilihan
@@ -296,8 +296,14 @@ export default function Home() {
 
             <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
               {projectsHome.map((pkg, idx) => (
-                <div key={idx} className="group cursor-pointer">
-                  <div className="relative mb-6 aspect-video overflow-hidden rounded-2xl bg-gray-100">
+                <a
+                  href={pkg.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  key={idx}
+                  className="group shadow-3xl cursor-pointer rounded-xl border-2 border-gray-200 bg-gray-50 p-6"
+                >
+                  <div className="relative mb-6 aspect-video overflow-hidden rounded-xl bg-gray-100">
                     {/* Tambahkan src gambar portfolio di sini */}
                     <img
                       src={pkg.image}
@@ -319,7 +325,7 @@ export default function Home() {
                       {pkg.subtitle}
                     </p>
                   </div>
-                </div>
+                </a>
               ))}
             </div>
           </div>

@@ -1,5 +1,5 @@
 import SinergiKonstruksiImage from "../assets/images/company-profile.webp";
-import CrumbsImage from "../assets/images/crumbs.webp";
+import RidhoWebProfile from "../assets/images/ridho-web-profile.png";
 import PutriCandiImage from "../assets/images/putri-candi.webp";
 
 export const waLink = "https://wa.me/6285183303954";
@@ -126,6 +126,7 @@ export const projectsHome = [
     subtitle:
       "Halaman penawaran berkonversi tinggi yang dirancang untuk eskalasi kampanye digital.",
     image: PutriCandiImage,
+    link: "https://putricandigroup.web.id/",
   },
   {
     category: "Company Profile",
@@ -133,12 +134,14 @@ export const projectsHome = [
     subtitle:
       "Representasi digital premium untuk memperkuat kredibilitas dan memenangkan tender proyek.",
     image: SinergiKonstruksiImage,
+    link: "https://contohcompro.rirolab.com/",
   },
   {
-    category: "Landing Page",
-    title: "Crumbs Official",
+    category: "Personal Web Profile",
+    title: "Muhammad Ridho Ar-Rosyid",
     subtitle:
-      "Optimasi antarmuka dan struktur informasi untuk mendongkrak rasio penjualan prospek.",
-    image: CrumbsImage,
+      "Website Personal branding yang mendetail untuk meningkatkan keberadaan Anda di internet.",
+    image: RidhoWebProfile,
+    link: "https://ridhoarrosyid.github.io/",
   },
 ];
