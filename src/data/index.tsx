@@ -12,7 +12,7 @@ export const landingPagePackages = [
     linkCta:
       "https://wa.me/6285183303954?text=Halo%20Rirolab%2C%20saya%20tertarik%20untuk%20memesan%20paket%20Landing%20Page%20-%20Starter%20Promo%20%28Rp1.000.000%29.%20Boleh%20minta%20info%20lebih%20lanjut%3F",
     features: [
-      "Free Domain (.com)",
+      "Free Domain",
       "Hosting Shared 1 bulan",
       "Desain Responsif (Mobile/Desktop)",
       "1 Halaman Landing Page",
@@ -69,7 +69,7 @@ export const companyProfilePackages = [
     linkCta:
       "https://wa.me/6285183303954?text=Halo%20Rirolab%2C%20saya%20tertarik%20untuk%20memesan%20paket%20Company%20Profile%20-%20Essential%20%28Rp2.000.000%29.%20Boleh%20minta%20info%20lebih%20lanjut%3F",
     features: [
-      "Free Domain (.com)",
+      "Free Domain",
       "Hosting Shared 1 bulan",
       "Desain Responsif (Mobile/Desktop)",
       "3 Halaman Utama (Home, About, Contact)",
