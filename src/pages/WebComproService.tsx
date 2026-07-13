@@ -23,7 +23,7 @@ const features = [
   {
     icon: <Zap className="text-blue-950" size={28} />,
     title: "Akses Cepat & Ringan",
-    desc: "Optimasi kode tingkat lanjut memastikan website company profile Anda terbuka dalam sekejap di perangkat klien atau mitra.",
+    desc: "Optimasi kode tingkat lanjut memastikan website company profile Anda terbuka dalam sekejap di perangkat pelanggan atau mitra.",
   },
   {
     icon: <Clock className="text-blue-950" size={28} />,
@@ -146,7 +146,7 @@ const testimonials = [
     star: 5,
     name: "Santi Putri",
     testi:
-      "Prosesnya sangat transparan dan pengerjaannya on-time. Website yang mereka buat sangat memudahkan tim kami dalam menjelaskan identitas dan layanan perusahaan ke calon klien.",
+      "Prosesnya sangat transparan dan pengerjaannya on-time. Website yang mereka buat sangat memudahkan tim kami dalam menjelaskan identitas dan layanan perusahaan ke calon pelanggan.",
     occupation: "Marketing Manager, Mitra Logistik",
   },
   {
@@ -233,7 +233,7 @@ export default function CompanyProfileService() {
       <section className="bg-[#F8F9FA] py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 className="mx-auto mb-12 max-w-3xl text-center text-xl leading-relaxed font-bold text-gray-900 sm:text-2xl md:mb-16 md:text-3xl">
-            Belum punya website resmi bikin klien ragu? Jangan biarkan
+            Belum punya website resmi bikin pelanggan ragu? Jangan biarkan
             kepercayaan bisnis Anda turun hanya karena ketiadaan company profile
             yang meyakinkan.
           </h2>
