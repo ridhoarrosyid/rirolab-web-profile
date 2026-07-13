@@ -75,8 +75,8 @@ const lpPricing = [
   },
   {
     name: "Custom Funnel",
-    originalPrice: "Rp3.750.000",
-    price: "Rp3.000.000",
+    originalPrice: "Rp3.000.000",
+    price: "Rp2.500.000",
     isPopular: false,
     features: [
       "Semua yang ada di Business",
