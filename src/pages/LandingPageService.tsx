@@ -14,6 +14,7 @@ import putriCandiDesktop from "../assets/images/putri-candi.webp";
 import crumbsLandingPage from "../assets/images/crumbs.webp";
 import companyWebProfile from "../assets/images/company-profile.webp";
 import WhatsApp from "../assets/icons/WhatsApp";
+import { Link } from "react-router";
 
 // --- Data Section ---
 
@@ -31,7 +32,7 @@ const features = [
   {
     icon: <Settings className="text-blue-950" size={28} />,
     title: "Fitur Fleksibel",
-    desc: "Arsitektur modular yang memungkinkan penambahan fitur kustom sesuai kebutuhan spesifik B2B Anda.",
+    desc: "Arsitektur modular yang memungkinkan penambahan fitur kustom sesuai kebutuhan spesifik UMKM Anda.",
   },
 ];
 
@@ -57,7 +58,7 @@ const lpPricing = [
   {
     name: "Business Ads",
     originalPrice: "Rp2.500.000",
-    price: "Rp2.000.000",
+    price: "Rp1.900.000",
     isPopular: true,
     badgeText: "PALING POPULER",
     features: [
@@ -76,7 +77,7 @@ const lpPricing = [
   {
     name: "Custom Funnel",
     originalPrice: "Rp3.000.000",
-    price: "Rp2.500.000",
+    price: "Rp2.400.000",
     isPopular: false,
     features: [
       "Semua yang ada di Business",
@@ -107,7 +108,7 @@ const faqs = [
   },
   {
     q: "Apakah landing page bisa diakses di HP?",
-    a: "Wajib. Semua landing page buatan Rirolab menggunakan pendekatan Mobile-First agar tampil sempurna di smartphone maupun desktop.",
+    a: "Wajib. Semua landing page buatan Damarian Biznis menggunakan pendekatan Mobile-First agar tampil sempurna di smartphone maupun desktop.",
   },
 ];
 
@@ -115,14 +116,17 @@ const portfolio = [
   {
     image: putriCandiDesktop,
     caption: "PO Putri Candi - Transportasi",
+    link: "https://putricandigroup.web.id/",
   },
   {
     image: crumbsLandingPage,
     caption: "Crumbs Official - F&B Bisnis",
+    link: "https://crumbs-coffee-gen-z-t1s4.bolt.host",
   },
   {
     image: companyWebProfile,
     caption: "Sinergi Konstruksi - Company Profile",
+    link: "#",
   },
 ];
 
@@ -131,7 +135,7 @@ const testimonials = [
     star: 5,
     name: "Budi Santoso",
     testi:
-      "Rirolab benar-benar mengerti kebutuhan B2B. Landing page proyek konstruksi kami sekarang jauh lebih ringan, terlihat elegan, dan leads dari tender meningkat signifikan.",
+      "Damarian Biznis benar-benar mengerti kebutuhan UMKM. Landing page toko kami sekarang jauh lebih ringan, terlihat elegan, dan leads dari tender meningkat signifikan.",
     occupation: "Direktur Utama, PT Sinergi Konstruksi",
   },
   {
@@ -145,7 +149,7 @@ const testimonials = [
     star: 5,
     name: "Andi Nugraha",
     testi:
-      "Rirolab benar-benar mengerti kebutuhan B2B. Landing page kami sekarang jauh lebih ringan dan leads meningkat hingga 40%. Sangat direkomendasikan untuk partner digital.",
+      "Damarian Biznis benar-benar mengerti kebutuhan UMKM. Landing page kami sekarang jauh lebih ringan dan leads meningkat hingga 40%. Sangat direkomendasikan untuk partner digital.",
     occupation: "CEO, Technoforward Solutions",
   },
 ];
@@ -158,7 +162,7 @@ export default function LandingPageService() {
     pkgName?: string,
     price?: string,
   ) => {
-    const msg = `Halo Rirolab, saya tertarik dengan paket Landing Page ${pkgName && price ? `- ${pkgName} (${price})` : ""}. Bisa bantu jelaskan detailnya?`;
+    const msg = `Halo Kak, saya tertarik dengan paket Landing Page ${pkgName && price ? `- ${pkgName} (${price})` : ""}. Bisa bantu jelaskan detailnya?`;
     const url = `https://wa.me/6285183303954?text=${encodeURIComponent(msg)}`;
     landingPageConversion(e as never, url);
   };
@@ -174,7 +178,7 @@ export default function LandingPageService() {
         <div className="grid grid-cols-1 items-center lg:grid-cols-5 lg:gap-12">
           <div className="animate-in fade-in slide-in-from-left-8 space-y-6 duration-700 md:space-y-8 lg:col-span-3">
             <h1 className="text-3xl leading-tight font-extrabold text-blue-950 sm:text-4xl md:text-5xl lg:text-6xl">
-              Jasa Landing Page B2B: Fitur Fleksibel, Performa Cepat.
+              Jasa Landing Page UMKM: Fitur Fleksibel, Performa Cepat.
             </h1>
             <p className="max-w-xl text-base leading-relaxed text-gray-600 md:text-lg">
               Kami membangun halaman penawaran yang tidak hanya cantik, tapi
@@ -337,7 +341,9 @@ export default function LandingPageService() {
           <div className="relative">
             <div className="flex snap-x snap-mandatory gap-4 overflow-x-auto pt-4 pb-8 [-ms-overflow-style:none] [scrollbar-width:none] md:gap-6 [&::-webkit-scrollbar]:hidden">
               {portfolio.map((e, i) => (
-                <div
+                <Link
+                  to={e.link}
+                  target="blank"
                   key={i}
                   className="group relative flex w-[85%] flex-none cursor-pointer snap-center flex-col overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl md:w-[calc(50%-12px)] md:snap-start"
                 >
@@ -355,7 +361,7 @@ export default function LandingPageService() {
                       {e.caption}
                     </h3>
                   </div>
-                </div>
+                </Link>
               ))}
             </div>
             <div className="mt-2 flex justify-center">
@@ -392,16 +398,16 @@ export default function LandingPageService() {
                     "{t.testi}"
                   </p>
                   <div className="flex items-center gap-3 md:gap-4">
-                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-blue-100 text-base font-black text-blue-800 shadow-inner md:h-12 md:w-12 md:text-lg">
+                    {/* <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-blue-100 text-base font-black text-blue-800 shadow-inner md:h-12 md:w-12 md:text-lg">
                       {t.name.charAt(0)}
-                    </div>
+                    </div> */}
                     <div>
                       <h4 className="text-sm font-bold text-blue-950 md:text-base">
                         {t.name}
                       </h4>
-                      <p className="text-[10px] font-bold tracking-widest text-gray-400 uppercase md:text-xs">
+                      {/* <p className="text-[10px] font-bold tracking-widest text-gray-400 uppercase md:text-xs">
                         {t.occupation}
-                      </p>
+                      </p> */}
                     </div>
                   </div>
                 </div>
