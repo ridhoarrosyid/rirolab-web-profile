@@ -3,7 +3,7 @@ import WhatsApp from "../assets/icons/WhatsApp";
 
 export default function FloatingWa() {
   const message =
-    "https://wa.me/6285183303954?text=Halo%20Rirolab!%20Saya%20butuh%20bantuan%20atau%20ingin%20konsultasi%20cepat%20mengenai%20website%20bisnis%20saya";
+    "https://wa.me/6285183303954?text=Halo%20Kakk!%20Saya%20butuh%20bantuan%20atau%20ingin%20konsultasi%20cepat%20mengenai%20website%20bisnis%20saya";
   return (
     <a
       href={message}

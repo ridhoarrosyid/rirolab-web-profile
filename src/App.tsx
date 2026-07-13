@@ -6,6 +6,7 @@ import NotFound from "./pages/NotFound";
 import LandingPageService from "./pages/LandingPageService";
 import DefaultLayout from "./layouts/DefaultLayout";
 import DamarianBizLayout from "./layouts/DamarianBizLayout";
+import WebComproService from "./pages/WebComproService";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
             path="/landing-page-service"
             element={<LandingPageService />}
           />
+          <Route path="/compro-service" element={<WebComproService />} />
         </Route>
       </Routes>
     </BrowserRouter>
