@@ -1,15 +1,23 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import LogoBiznis from "../assets/icons/damarinbiznis.webp";
-import { trackWAConversion } from "../utils/analytics";
+import { landingPageConversion } from "../utils/analytics";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const waLinkNavbar =
-    "https://wa.me/6285183303954?text=Halo%20Kak%2C%20saya%20ingin%20berdiskusi%20mengenai%20layanan%20pembuatan%20website%20untuk%20bisnis%20saya.";
 
   // Fungsi untuk menutup menu mobile saat link diklik
   const closeMenu = () => setIsMenuOpen(false);
+
+  const handleWA = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    pkgName?: string,
+    price?: string,
+  ) => {
+    const msg = `Halo Kak, saya tertarik dengan paket Landing Page ${pkgName && price ? `- ${pkgName} (${price})` : ""}. Bisa bantu jelaskan detailnya?`;
+    const url = `https://wa.me/6285183303954?text=${encodeURIComponent(msg)}`;
+    landingPageConversion(e as never, url);
+  };
 
   return (
     <nav className="fixed top-0 z-50 w-full border-b border-gray-100 bg-white/90 backdrop-blur-md transition-all">
@@ -27,8 +35,8 @@ export default function Navbar() {
 
           <div className="hidden md:flex">
             <a
-              href={waLinkNavbar}
-              onClick={(e) => trackWAConversion(e, waLinkNavbar)}
+              href="#"
+              onClick={(e) => handleWA(e as never)}
               target="_blank"
               rel="noopener noreferrer"
               className="transform rounded-full bg-blue-950 px-6 py-2.5 text-sm font-medium text-white shadow-lg shadow-blue-900/20 transition-all hover:scale-105 hover:bg-blue-900"
@@ -54,12 +62,12 @@ export default function Navbar() {
         <div className="border-b border-gray-100 bg-white md:hidden">
           <div className="space-y-2 px-4 pt-2 pb-6">
             <a
-              href={waLinkNavbar}
+              href="#"
               target="_blank"
               rel="noopener noreferrer"
               onClick={(e) => {
                 closeMenu();
-                trackWAConversion(e, waLinkNavbar);
+                handleWA(e as never);
               }}
               className="mt-4 block w-full rounded-full bg-blue-950 px-6 py-3 text-center text-sm font-medium text-white"
             >
