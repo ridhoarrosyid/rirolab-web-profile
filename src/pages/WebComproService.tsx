@@ -8,7 +8,6 @@ import {
   Star,
   Clock,
 } from "lucide-react";
-import FloatingWhatsApp from "../components/FloatingWa";
 import { landingPageConversion } from "../utils/analytics";
 import putriCandiDesktop from "../assets/images/putri-candi.webp";
 import crumbsLandingPage from "../assets/images/crumbs.webp";
@@ -473,7 +472,16 @@ export default function CompanyProfileService() {
         </div>
       </section>
 
-      <FloatingWhatsApp />
+      <a
+        href="#"
+        target="_blank"
+        onClick={(e) => handleWA(e as never)}
+        rel="noopener noreferrer"
+        className="animate-bounce-slow fixed right-6 bottom-6 z-50 flex items-center justify-center rounded-full bg-[#25d366] p-4 text-white shadow-lg shadow-green-500/30 transition-all hover:scale-110 hover:bg-green-500"
+        aria-label="Chat on WhatsApp"
+      >
+        <WhatsApp className="size-8" />
+      </a>
     </div>
   );
 }
