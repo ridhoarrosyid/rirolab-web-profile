@@ -1,13 +1,19 @@
 import { Link } from "react-router";
 import Instagram from "../assets/icons/Instagram";
 import LogoBiznis from "../assets/icons/damarinbiznis.webp";
-import { trackWAConversion } from "../utils/analytics";
+import { landingPageConversion } from "../utils/analytics";
 
 export default function Footer() {
-  const waLink = [
-    "https://wa.me/6289649094667?text=Halo%20Kak%2C%20saya%20mengunjungi%20website%20Anda%20dan%20ingin%20bertanya%20lebih%20lanjut%20mengenai%20layanan%20yang%20tersedia",
-    "https://wa.me/6285183303954?text=Halo%20Kak%2C%20saya%20mengunjungi%20website%20Anda%20dan%20ingin%20bertanya%20lebih%20lanjut%20mengenai%20layanan%20yang%20tersedia",
-  ];
+  const handleWA = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    number: string,
+    pkgName?: string,
+    price?: string,
+  ) => {
+    const msg = `Halo Kak, saya tertarik dengan paket Landing Page ${pkgName && price ? `- ${pkgName} (${price})` : ""}. Bisa bantu jelaskan detailnya?`;
+    const url = `https://wa.me/${number}?text=${encodeURIComponent(msg)}`;
+    landingPageConversion(e as never, url);
+  };
   return (
     <footer className="mt-auto border-t border-gray-200 bg-gray-50 pt-16 pb-8">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -47,9 +53,9 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <a
-                  href={waLink[0]}
+                  href="#"
                   target="_blank"
-                  onClick={(e) => trackWAConversion(e, waLink[0])}
+                  onClick={(e) => handleWA(e as never, "6289649094667")}
                   rel="noopener noreferrer"
                   className="text-sm text-gray-500 transition-colors hover:text-blue-600"
                 >
@@ -58,9 +64,9 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href={waLink[1]}
+                  href="#"
                   target="_blank"
-                  onClick={(e) => trackWAConversion(e, waLink[1])}
+                  onClick={(e) => handleWA(e as never, "6285183303954")}
                   rel="noopener noreferrer"
                   className="text-sm text-gray-500 transition-colors hover:text-blue-600"
                 >
