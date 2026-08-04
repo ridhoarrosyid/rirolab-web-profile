@@ -331,6 +331,9 @@ export default function LandingPageService() {
             </div>
           ))}
         </div>
+        <p className="mt-8 text-xs text-gray-400 italic lg:text-sm">
+          *harga menyesuaikan kebutuhan
+        </p>
       </section>
 
       {/* 4. Portfolio Mini */}
