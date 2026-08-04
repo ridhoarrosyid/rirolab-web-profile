@@ -21,24 +21,25 @@ import { Link } from "react-router";
 const features = [
   {
     icon: <Zap className="text-blue-950" size={28} />,
-    title: "Load Cepat",
-    desc: "Optimasi kode tingkat lanjut memastikan landing page terbuka dalam sekejap di perangkat apapun.",
+    title: "Filter Prospek",
+    desc: "Menyaring pencari harga murah. Hanya calon klien dengan budget & proyek yang sesuai yang masuk ke WA Anda.",
   },
   {
     icon: <Clock className="text-blue-950" size={28} />,
-    title: "Pengerjaan Cepat",
-    desc: "Sistem kerja efisien kami memungkinkan peluncuran kampanye Anda dalam hitungan hari, bukan minggu.",
+    title: "Edukasi & Build Trust",
+    desc: "Menampilkan portofolio, legalitas, & alur kerja secara transparan agar calon klien paham nilai & kualitas harga Anda sebelum mengontak.",
   },
   {
     icon: <Settings className="text-blue-950" size={28} />,
-    title: "Fitur Fleksibel",
-    desc: "Arsitektur modular yang memungkinkan penambahan fitur kustom sesuai kebutuhan spesifik UMKM Anda.",
+    title: "Performa & Speed Tinggi",
+    desc: "Memastikan foto-foto portofolio proyek high-resolution milik Anda terbuka instan tanpa lemot di HP calon pembeli.",
   },
 ];
 
 const lpPricing = [
   {
-    name: "Starter Promo",
+    name: "Basic Showcase",
+    desc: "Cocok untuk profil portofolio simpel.",
     originalPrice: "Rp1.000.000",
     price: "Rp800.000",
     isPopular: false,
@@ -56,7 +57,8 @@ const lpPricing = [
     cta: "Ambil Paket Starter",
   },
   {
-    name: "Business Ads",
+    name: "Leads Converter & Filter",
+    desc: "Paket lengkap edukasi + WA form interaktif untuk filter leads.",
     originalPrice: "Rp2.500.000",
     price: "Rp1.900.000",
     isPopular: true,
@@ -75,7 +77,8 @@ const lpPricing = [
     cta: "Klaim Promo Ini",
   },
   {
-    name: "Custom Funnel",
+    name: "Custom Company Profile & Funnel",
+    desc: "Untuk skala kontraktor/PT dengan kebutuhan multi-page & animasi parallax.",
     originalPrice: "Rp3.000.000",
     price: "Rp2.400.000",
     isPopular: false,
@@ -140,22 +143,22 @@ const testimonials = [
     star: 5,
     name: "Budi Santoso",
     testi:
-      "Damarian Biznis benar-benar mengerti kebutuhan UMKM. Landing page toko kami sekarang jauh lebih ringan, terlihat elegan, dan leads dari tender meningkat signifikan.",
-    occupation: "Direktur Utama, PT Sinergi Konstruksi",
+      "Sebelum pakai landing page ini, iklan Meta Ads kami sebetulnya banjir chat, tapi 80% isinya 'sampah'—cuma nanya pricelist termurah terus hilang. Setelah dibuatkan landing page dengan sistem filter edukasi dari Damarian Bisnis, yang masuk ke WA sekarang calon klien yang memang paham kualitas dan punya budget proyek yang sesuai.",
+    occupation: "Lead Designer",
   },
   {
     star: 5,
     name: "Santi Putri",
     testi:
-      "Prosesnya sangat transparan dan pengerjaannya on-time. Fitur kustom yang mereka buat sangat memudahkan tim sales kami dalam mengelola prospek baru.",
-    occupation: "Marketing Manager, Mitra Logistik",
+      "Proyek konstruksi itu kan bernilai puluhan hingga ratusan juta, jadi calon klien butuh trust tinggi sebelum mau diajak survey lokasi. Tampilan landing page barunya kelihatan sangat profesional dan portofolio kami tersusun rapi. Bikin prospek makin yakin sebelum bahkan sempat ngobrol di WA.",
+    occupation: "Kontraktor & Renovasi",
   },
   {
     star: 5,
     name: "Andi Nugraha",
     testi:
-      "Damarian Biznis benar-benar mengerti kebutuhan UMKM. Landing page kami sekarang jauh lebih ringan dan leads meningkat hingga 40%. Sangat direkomendasikan untuk partner digital.",
-    occupation: "CEO, Technoforward Solutions",
+      "Proses pengerjaannya cepat dan timnya benar-benar paham alur bisnis jasa interior. Sekarang kami enggak perlu capek-capek jelaskan alur kerja dari nol di chat WA, karena calon klien sudah teredukasi duluan lewat landing page. Conversion rate dari chat ke deal naik signifikan!",
+    occupation: "Principal Interior Architect",
   },
 ];
 
@@ -183,12 +186,12 @@ export default function LandingPageService() {
         <div className="grid grid-cols-1 items-center lg:grid-cols-5 lg:gap-12">
           <div className="animate-in fade-in slide-in-from-left-8 space-y-6 duration-700 md:space-y-8 lg:col-span-3">
             <h1 className="text-3xl leading-tight font-extrabold text-blue-950 sm:text-4xl md:text-5xl lg:text-6xl">
-              Jasa Landing Page UMKM: Fitur Fleksibel, Performa Cepat.
+              Landing Page Khusus Bisnis Konstruksi & Desain Interior.
             </h1>
             <p className="max-w-xl text-base leading-relaxed text-gray-600 md:text-lg">
-              Kami membangun halaman penawaran yang tidak hanya cantik, tapi
-              bekerja keras untuk mengonversi traffic iklan Anda menjadi leads
-              yang siap membeli.
+              Capek Iklan Jalan Tapi Chat WA Cuma Nanya Harga Lalu Ghosting?
+              Kami Buatkan Landing Page yang Menyaring & Mengedukasi Calon Klien
+              Mentah Jadi Leads High-Quality Siap Deal.
             </p>
             <div className="flex flex-col flex-wrap gap-4 pt-2 sm:flex-row">
               <a
@@ -233,8 +236,7 @@ export default function LandingPageService() {
       <section className="bg-[#F8F9FA] py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 className="mx-auto mb-12 max-w-3xl text-center text-xl leading-relaxed font-bold text-gray-900 sm:text-2xl md:mb-16 md:text-3xl">
-            Website lambat bikin klien kabur? Jangan biarkan konversi bisnis
-            Anda turun karena landing page yang berat dan kaku.
+            Mengapa Landing Page Konvensional Bikin Iklan Anda Rugi?
           </h2>
           <div className="grid grid-cols-1 gap-6 md:grid-cols-3 md:gap-8">
             {features.map((f, i) => (
@@ -251,6 +253,81 @@ export default function LandingPageService() {
                 </p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Workflow Section */}
+      <section className="bg-gray-50 py-24">
+        <div className="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
+          <div className="mb-16">
+            <h2 className="mb-4 text-3xl font-bold text-blue-950">
+              Alur Kerja Kami
+            </h2>
+            <p className="mx-auto max-w-2xl text-gray-600">
+              Proses terstruktur untuk memastikan hasil yang berkualitas tinggi
+              dan sesuai ekspektasi.
+            </p>
+          </div>
+
+          <div className="relative">
+            {/* Connecting Line */}
+            <div className="absolute top-8 right-[5%] left-[5%] z-0 hidden h-0.5 bg-gray-200 lg:block"></div>
+
+            <div className="relative z-10 grid grid-cols-2 gap-6 md:grid-cols-4 lg:grid-cols-7 lg:gap-4">
+              {[
+                {
+                  step: "1",
+                  title: "Briefing & Konsultasi",
+                  desc: "Memahami visi dan kebutuhan bisnis Anda secara mendalam.",
+                },
+                {
+                  step: "2",
+                  title: "Proposal & Dealing",
+                  desc: "Penawaran rencana kerja, estimasi waktu, dan penentuan harga.",
+                },
+                {
+                  step: "3",
+                  title: "Down Payment",
+                  desc: "Komitmen awal untuk memulai proses pengerjaan proyek.",
+                },
+                {
+                  step: "4",
+                  title: "Pengerjaan",
+                  desc: "Proses desain dan pengembangan website dieksekusi.",
+                },
+                {
+                  step: "5",
+                  title: "Review & Revisi",
+                  desc: "Evaluasi putaran pertama dan penyelesaian revisi dari Anda.",
+                },
+                {
+                  step: "6",
+                  title: "Pelunasan",
+                  desc: "Pembayaran sisa nilai proyek secara keseluruhan.",
+                },
+                {
+                  step: "7",
+                  title: "Serah Terima",
+                  desc: "Penyerahan seluruh aset digital dan panduan pengelolaan.",
+                },
+              ].map((item, idx) => (
+                <div
+                  key={idx}
+                  className="group flex flex-col items-center text-center"
+                >
+                  <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-blue-950 text-xl font-bold text-white shadow-lg transition-transform duration-300 group-hover:-translate-y-2">
+                    {item.step}
+                  </div>
+                  <h4 className="mb-2 text-sm font-bold text-gray-900 lg:text-base">
+                    {item.title}
+                  </h4>
+                  <p className="px-2 text-xs leading-relaxed text-gray-500">
+                    {item.desc}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -294,6 +371,9 @@ export default function LandingPageService() {
                 <div className="text-3xl font-black sm:text-4xl lg:text-5xl">
                   {pkg.price}
                 </div>
+                {pkg.desc && (
+                  <p className="mt-5 text-sm text-slate-400">{pkg.desc}</p>
+                )}
               </div>
 
               <ul className="mb-10 flex-grow space-y-3 md:space-y-4">
