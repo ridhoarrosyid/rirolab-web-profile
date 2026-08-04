@@ -12,6 +12,7 @@ import { landingPageConversion } from "../utils/analytics";
 import putriCandiDesktop from "../assets/images/putri-candi.webp";
 import crumbsLandingPage from "../assets/images/crumbs.webp";
 import companyWebProfile from "../assets/images/company-profile.webp";
+import putteiLandingpage from "../assets/images/puttei.webp";
 import WhatsApp from "../assets/icons/WhatsApp";
 import { Link } from "react-router";
 
@@ -116,6 +117,11 @@ const portfolio = [
     image: putriCandiDesktop,
     caption: "PO Putri Candi - Transportasi",
     link: "https://putricandigroup.web.id/",
+  },
+  {
+    image: putteiLandingpage,
+    caption: "Puttei - Oleh-Oleh",
+    link: "http://puttei.damarianoleholeh.com/",
   },
   {
     image: crumbsLandingPage,
